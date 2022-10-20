@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "method": {
+      "const": "POST"
+    },
+    "path": {
+      "const": "register"
+    },
+    "post": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "agreeToTerms": {
+          "type": "boolean"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "passwordConfirm": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "agreeToTerms",
+        "name",
+        "email",
+        "password",
+        "passwordConfirm"
+      ]
+    },
+    "query": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ver": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ver"
+      ]
+    }
+  },
+  "required": [
+    "method",
+    "path",
+    "post",
+    "query"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "[json]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[php]": {
+      "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    },
+    "[scss]": {
+      "editor.formatOnSave": false
+    },
+    "debug.javascript.codelens.npmScripts": "never",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.fixAll.eslint": true
+    },
+    "editor.detectIndentation": false,
+    "editor.foldingStrategy": "indentation",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.unicodeHighlight.ambiguousCharacters": true,
+    "eslint.codeActionsOnSave.rules": [
+      "*"
+    ],
+    "eslint.format.enable": true,
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "foldOnOpen.targets": [
+      "AllBlockComments"
+    ],
+    "intelephense.files.exclude": [
+      "**/.git/**",
+      "**/.svn/**",
+      "**/.hg/**",
+      "**/CVS/**",
+      "**/.DS_Store/**",
+      "**/bower_components/**",
+      "**/vendor/**/{Tests,tests}/**",
+      "**/.history/**",
+      "**/vendor/**/vendor/**"
+    ],
+    "javascript.suggestionActions.enabled": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "php-cs-fixer.autoFixByBracket": true,
+    "php-cs-fixer.executablePath": "${workspaceFolder}/vendor/bin/php-cs-fixer",
+    "php-cs-fixer.executablePathWindows": "${workspaceFolder}/vendor/bin/php-cs-fixer.bat",
+    "php-cs-fixer.onsave": true,
+    "search.exclude": {
+      "CHANGELOG.md": true,
+      "composer.lock": true,
+      "dist": true,
+      "docs": true,
+      "es": true,
+      "lcov.info": true,
+      "package-lock.json": true
+    },
+    "sort-json.settings.contextMenu": {
+      "setSortType": false,
+      "sortJSON": false,
+      "sortJSONDeepReverse": false,
+      "sortJSONReverse": false,
+      "toggleSortCaseSensitive": false
+    },
+    "sort-json.settings.ignoreArraysOnDeepSort": true,
+    "sort-json.settings.isCaseSensitive": true,
+    "sort-json.settings.orderOverride": [
+      "$schema",
+      "$id",
+      "name",
+      "description",
+      "keywords",
+      "type",
+      "minimum-stability",
+      "prefer-stable",
+      "version",
+      "license",
+      "homepage",
+      "extends"
+    ],
+    "stylelint.validate": [
+      "css",
+      "less",
+      "postcss",
+      "scss"
+    ],
+    "typescript.suggestionActions.enabled": false,
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "volar.codeLens.references": false,
+    "workbench.colorCustomizations": {
+      "editor.foldBackground": "#0000"
+    },
+    "workbench.startupEditor": "none",
+    "workbench.tree.indent": 30
+  }
+}

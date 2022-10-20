@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "method": {
+      "const": "POST"
+    },
+    "path": {
+      "const": "login-with-facebook"
+    },
+    "post": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "accessToken": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "accessToken"
+      ]
+    },
+    "query": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ver": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ver"
+      ]
+    }
+  },
+  "required": [
+    "method",
+    "path",
+    "post",
+    "query"
+  ]
+}

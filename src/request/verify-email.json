@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "method": {
+      "const": "POST"
+    },
+    "path": {
+      "const": "verify-email"
+    },
+    "post": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "token"
+      ]
+    },
+    "query": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ver": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ver"
+      ]
+    }
+  },
+  "required": [
+    "method",
+    "path",
+    "post",
+    "query"
+  ]
+}

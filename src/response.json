@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "$defs": {
+    "actions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "config": {
+          "$ref": "#/$defs/config"
+        },
+        "token": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "const": false
+            }
+          ]
+        },
+        "user": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/user"
+            },
+            {
+              "const": false
+            }
+          ]
+        }
+      },
+      "required": []
+    },
+    "config": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "facebookClientId": {
+          "type": "string"
+        },
+        "googleClientId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "facebookClientId",
+        "googleClientId"
+      ]
+    },
+    "errors": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^\\w+$": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": []
+    },
+    "expectedError": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "errorType": {
+          "enum": [
+            "InvalidApiToken",
+            "InvalidRequest",
+            "Unauthenticated"
+          ]
+        },
+        "message": {
+          "type": "string"
+        },
+        "status": {
+          "const": "Failure"
+        },
+        "ver": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "errorType",
+        "message",
+        "status",
+        "ver"
+      ]
+    },
+    "successResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "actions": {
+          "$ref": "#/$defs/actions"
+        },
+        "status": {
+          "const": "Success"
+        },
+        "ver": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "ver"
+      ]
+    },
+    "unexpectedError": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "errorType": {
+          "const": "Exception"
+        },
+        "exception": {
+          "type": "string"
+        },
+        "file": {
+          "type": "string"
+        },
+        "line": {
+          "type": "number"
+        },
+        "message": {
+          "type": "string"
+        },
+        "status": {
+          "const": "Failure"
+        },
+        "trace": {
+          "type": "array"
+        },
+        "ver": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "errorType",
+        "exception",
+        "file",
+        "line",
+        "message",
+        "status",
+        "trace",
+        "ver"
+      ]
+    },
+    "user": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "agreedToTerms": {
+          "type": "boolean"
+        },
+        "email": {
+          "type": "string"
+        },
+        "facebookId": {
+          "type": "string"
+        },
+        "googleId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "agreedToTerms",
+        "name"
+      ]
+    },
+    "validationError": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "errorType": {
+          "enum": [
+            "ValidationError"
+          ]
+        },
+        "errors": {
+          "$ref": "#/$defs/errors"
+        },
+        "status": {
+          "const": "Failure"
+        },
+        "ver": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "errorType",
+        "errors",
+        "status",
+        "ver"
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/expectedError"
+    },
+    {
+      "$ref": "#/$defs/successResponse"
+    },
+    {
+      "$ref": "#/$defs/unexpectedError"
+    },
+    {
+      "$ref": "#/$defs/validationError"
+    }
+  ]
+}

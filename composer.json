@@ -1,0 +1,23 @@
+{
+  "name": "real/time-manager-schema",
+  "description": "Time manager schema.",
+  "type": "library",
+  "license": "ISC",
+  "homepage": "https://github.com/ilyub/time-manager-schema",
+  "archive": {
+    "exclude": [
+      "!/composer.json",
+      "!/composer.lock",
+      "!/package.json",
+      "!/src/**/*.json",
+      "*",
+      ".*"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ilia Liubinskii",
+      "email": "admin.phpdev@gmail.com"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "name": "time-manager-schema",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Time manager schema.",
+  "keywords": [
+    "schema",
+    "time manager"
+  ],
+  "homepage": "https://github.com/ilyub/time-manager-schema",
+  "bugs": {
+    "url": "https://github.com/ilyub/time-manager-schema/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ilyub/time-manager-schema.git"
+  },
+  "license": "ISC",
+  "author": "Ilia Liubinskii <admin.phpdev@gmail.com> (https://github.com/ilyub)",
+  "publisher": "ilyub",
+  "files": [
+    "/src"
+  ],
+  "scripts": {
+    "add-tags": "php node_modules/real-config/bin/add-tags.php",
+    "browserslist": "browserslist",
+    "build-changelog": "auto-changelog",
+    "clear-cache": "cf cache node_modules/.cache",
+    "commitlint": "commitlint --from=",
+    "commitlint-next": "commitlint --config=commitlint-next.config.js --edit",
+    "config-lint": "node node_modules/real-config/bin/config-lint.js",
+    "delete-tags": "php node_modules/real-config/bin/delete-tags.php",
+    "full-check": "php node_modules/real-config/bin/full-check.php",
+    "git:unix": "git config --replace-all core.ignorecase false",
+    "git:windows": "git config --replace-all core.ignorecase true",
+    "husky:commit-msg": "npm run commitlint-next",
+    "husky:pre-commit": "php node_modules/real-config/bin/pre-commit.php",
+    "husky:unset-hooks": "git config --unset core.hooksPath",
+    "major-release": "php node_modules/real-config/bin/major-release.php",
+    "markdownlint": "markdownlint *.md --ignore=CHANGELOG.md",
+    "ncu": "ncu --dep=dev,peer,prod",
+    "ncu-upgrade": "ncu --dep=dev,peer,prod --upgrade",
+    "next-release": "php node_modules/real-config/bin/next-release.php",
+    "npm:install": "npm install --no-audit --strict-peer-deps",
+    "npm:install-clean": "npm install-clean --no-audit --strict-peer-deps",
+    "npm:regenerate-lock-file": "npm install --no-audit --package-lock-only --strict-peer-deps",
+    "npm:update": "npm update --no-audit --strict-peer-deps",
+    "package-json-lint": "npmPkgJsonLint ./package.json",
+    "prepare": "node node_modules/real-config/bin/prepare.js",
+    "upgrade": "npm run ncu-upgrade && npm run npm:install"
+  },
+  "devDependencies": {
+    "real-config": "^1.14.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
