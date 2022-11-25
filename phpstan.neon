@@ -1,0 +1,6 @@
+includes:
+  - vendor/real/config/phpstan/recommended.neon
+parameters:
+  paths:
+    - src
+  tmpDir: cache/phpstan

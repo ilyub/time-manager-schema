@@ -64,11 +64,9 @@
       "package-lock.json": true
     },
     "sort-json.settings.contextMenu": {
-      "setSortType": false,
       "sortJSON": false,
       "sortJSONDeepReverse": false,
-      "sortJSONReverse": false,
-      "toggleSortCaseSensitive": false
+      "sortJSONReverse": false
     },
     "sort-json.settings.ignoreArraysOnDeepSort": true,
     "sort-json.settings.isCaseSensitive": true,
@@ -82,6 +80,7 @@
       "minimum-stability",
       "prefer-stable",
       "version",
+      "private",
       "license",
       "homepage",
       "extends"

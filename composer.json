@@ -1,7 +1,11 @@
 {
   "name": "real/time-manager-schema",
   "description": "Time manager schema.",
+  "keywords": [],
   "type": "library",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "private": false,
   "license": "ISC",
   "homepage": "https://github.com/ilyub/time-manager-schema",
   "archive": {
@@ -19,5 +23,10 @@
       "name": "Ilia Liubinskii",
       "email": "admin.phpdev@gmail.com"
     }
-  ]
+  ],
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.13",
+    "phpstan/phpstan": "^1.9.2",
+    "real/config": "^1.16"
+  }
 }

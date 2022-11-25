@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "description": "Time manager schema.",
-  "keywords": [
-    "schema",
-    "time manager"
-  ],
+  "keywords": [],
   "homepage": "https://github.com/ilyub/time-manager-schema",
   "bugs": {
     "url": "https://github.com/ilyub/time-manager-schema/issues"
@@ -28,6 +25,11 @@
     "clear-cache": "cf cache node_modules/.cache",
     "commitlint": "commitlint --from=",
     "commitlint-next": "commitlint --config=commitlint-next.config.js --edit",
+    "composer:bump": "composer bump",
+    "composer:dump-autoload": "composer dump-autoload",
+    "composer:outdated": "composer outdated",
+    "composer:reinstall": "composer reinstall *",
+    "composer:update": "composer update",
     "config-lint": "node node_modules/real-config/bin/config-lint.js",
     "delete-tags": "php node_modules/real-config/bin/delete-tags.php",
     "full-check": "php node_modules/real-config/bin/full-check.php",
@@ -46,11 +48,14 @@
     "npm:regenerate-lock-file": "npm install --no-audit --package-lock-only --strict-peer-deps",
     "npm:update": "npm update --no-audit --strict-peer-deps",
     "package-json-lint": "npmPkgJsonLint ./package.json",
+    "php-cs-fixer": "php vendor/bin/php-cs-fixer fix --verbose",
+    "phpstan": "php vendor/bin/phpstan analyse -c phpstan.neon",
+    "phpstan-quiet": "php vendor/bin/phpstan analyse -c phpstan.neon --quiet",
     "prepare": "node node_modules/real-config/bin/prepare.js",
     "upgrade": "npm run ncu-upgrade && npm run npm:install"
   },
   "devDependencies": {
-    "real-config": "^1.14.0"
+    "real-config": "^1.16.0"
   },
   "engines": {
     "node": ">=16.0.0",
